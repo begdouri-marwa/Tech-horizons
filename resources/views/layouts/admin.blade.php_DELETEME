@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title', 'Admin Panel')</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ route('editor.dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ route('editor.users') }}">Users</a></li>
+                <li><a href="{{ route('editor.issues') }}">Issues</a></li>
+                <li><a href="{{ route('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        @yield('content')
+    </main>
+
+    <footer>
+        <p>© {{ date('Y') }} Tech Horizons Admin Panel.</p>
+    </footer>
+</body>
+</html>
